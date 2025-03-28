@@ -1,30 +1,41 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import TextContent from './components/TextContent.vue';
+import Footer from './components/Footer.vue';
+import Intro from './components/intro.vue';
+import Work from './components/Work.vue';
+import Education from './components/Education.vue';
+import Project from './components/Project.vue';
+import Speak from './components/Speak.vue';
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <Header>
+  </Header>
+  <main>
+    <!-- 个人简介 -->
+    <TextContent title="个人简介">
+      <Intro></Intro>
+    </TextContent>
+    <!-- 职业经历 -->
+    <TextContent title="职业经历">
+      <Work></Work>
+    </TextContent>
+   <!-- 教育背景 --> 
+    <TextContent title="教育背景">
+      <Education></Education>
+    </TextContent>
+    <!-- 项目 -->
+    <TextContent title="项目">
+      <Project></Project>
+    </TextContent>
+    <!-- 演讲 -->
+    <TextContent title="演讲">
+      <Speak></Speak>
+    </TextContent>
+  </main>
+  <Footer></Footer>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>
