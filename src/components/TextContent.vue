@@ -2,13 +2,14 @@
 import { ref } from 'vue'
 
 defineProps({
-  title: String,
+  id: String,
+  title: String
 })
 
 </script>
 
 <template>
-  <article>
+  <article :id="id">
     <h2>{{ title }}</h2>
     <slot></slot>
   </article>
